@@ -1,0 +1,10 @@
+This folder contains connery.service and connery.cfg designed to be distributed by 3rd party distrubtions such as Fedora Project or Arch Linux.
+
+connery.cfg is a default configuration file for connery, that assumes the OS is new enough to have /run and /usr/lib/tmpfiles.d
+
+connery.service is a systemd service file that assumes you are using a rather recent Connery and has no multiple instance support (TODO). It also assumes that the system has a special user named connery designated for running the bot and this user has access to /run/connery (should be setup by connery.conf in /usr/lib/tmpfiles.d), /var/log/connery and /var/lib/connery
+
+Default installation paths:
+ connery.cfg	/etc
+ connery.conf	/usr/lib/tmpfiles.d
+ connery.service	/usr/lib/systemd/system
